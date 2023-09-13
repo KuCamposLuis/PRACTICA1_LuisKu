@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Área y Perímetro</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Área y Perímetro</h1>
+
+        <div class="container mt-5">
+            
+        
+            <h3 class="mt-3"><span class="badge bg-secondary">Figura:</span></h3>
+            <div class="form-group">
+                <select class="form-control" id="figura" onchange="cambiarFormulario()">
+                    <option value="cuadrado">Cuadrado</option>
+                    <option value="circulo">Círculo</option>
+                    <option value="triangulo">Triángulo</option>
+                    <option value="rectangulo">Rectangulo</option>
+                </select>
+            </div>
+        </div>
+        
+
+        <div id="cuadrado" style="display:none;">
+            <h2>Área y Perímetro del Cuadrado</h2>
+            <label class="lado" for="ladoCuadrado">Lado:</label>
+            <input class="box" type="number" id="ladoCuadrado">
+            <button class="btn btn-primary btn-lg" onclick="calcularCuadrado()">Calcular</button>
+            <h4 class="mt-3"><span class="badge bg-secondary">Valor del Área:</span> <span  id="resultadoAreaCuadrado" ></span></h4>
+            <h4 class="mt-3"><span class="badge bg-secondary">Valor del Perímetro:</span> <span id="resultadoPerimetroCuadrado"></span></h4>
+        </div>
+
+        <div id="circulo" style="display:none;">
+            <h2>Área y Perímetro del Círculo</h2>
+            <label class="radio" for="radioCirculo">Radio:</label>
+            <input class="box" type="number" id="radioCirculo">
+            <button class="btn btn-primary btn-lg" onclick="calcularCirculo()">Calcular</button>
+            <h4 class="mt-3"><span class="badge bg-secondary">Valor del Área:</span> <span  id="resultadoAreaCirculo"></span></h4>
+            <h4 class="mt-3"><span class="badge bg-secondary">Valor del Perímetro:</span> <span id="resultadoPerimetroCirculo"></span></h4>
+        </div>
+
+        <div id="triangulo" style="display:none;">
+            <h2>Área y Perímetro del Triángulo</h2>
+            <label class="Base" for="baseTriangulo">Base:</label>
+            <input class="box" type="number" id="baseTriangulo">
+            <label class="Altura" for="alturaTriangulo">Altura:</label>
+            <input class="box" type="number" id="alturaTriangulo">
+            <button class="btn btn-primary btn-lg" onclick="calcularTriangulo()">Calcular</button>
+            <h4 class="mt-3"><span class="badge bg-secondary">Valor del Área:</span> <span id="resultadoAreaTriangulo"></span></h4>
+            <h4 class="mt-3"><span class="badge bg-secondary">Valor del Perímetro:</span> <span id="resultadoPerimetroTriangulo"></span></h4>
+        </div>
+
+        <div id="rectangulo" style="display:none;">
+            <h3>Área y Perímetro del Rectangulo</h3>
+            <label class="Altura" for="AlturaRecta">Altura:</label>
+            <input class="box" type="number" id="AlturaRecta">
+            <label class="Base" for="BaseRecta">Base:</label>
+            <input class="box" type="number" id="BaseRecta">
+            <button class="btn btn-primary btn-lg" onclick="calcularRectangulo()" >Calcular</button>
+            <h4 class="mt-3"><span class="badge bg-secondary">Valor del Área:</span> <span id="resultadoAreaRectangulo"></span> </h4>
+            <h4 class="mt-3"><span class="badge bg-secondary">Valor del Perímetro:</span> <span id="resultadoPerimetroRectangulo"></span> </h4>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
